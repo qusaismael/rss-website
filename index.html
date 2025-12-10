@@ -20,8 +20,10 @@
     <meta property="twitter:description" content="AI-powered RSS filter that saves you 2.6 years of life.">
     <meta property="twitter:image" content="https://raw.githubusercontent.com/qusaismael/rss-ai/main/preview.png">
     
+    <link rel="preconnect" href="https://cdn.tailwindcss.com">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script>
         tailwind.config = {
             theme: {
@@ -78,6 +80,12 @@
         
         body {
             font-family: 'Inter', sans-serif;
+        }
+        .icon {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            line-height: 1;
         }
         
         .gradient-text {
@@ -170,7 +178,7 @@
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center space-x-3">
                     <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
-                        <i class="fas fa-rss text-white text-xl"></i>
+                        <span class="icon text-white text-xl" aria-hidden="true">📡</span>
                     </div>
                     <span class="text-xl font-bold gradient-text">RSS + AI</span>
                 </div>
@@ -180,11 +188,11 @@
                     <a href="#features" class="text-gray-300 hover:text-white transition-colors">Features</a>
                     <a href="#faq" class="text-gray-300 hover:text-white transition-colors">FAQ</a>
                     <a href="https://github.com/qusaismael/rss-ai" target="_blank" class="px-4 py-2 gradient-bg rounded-lg text-white font-medium hover:opacity-90 transition-opacity" aria-label="Get Started on GitHub">
-                        <i class="fab fa-github mr-2"></i>Get Started
+                        <span class="icon mr-2" aria-hidden="true">🐙</span>Get Started
                     </a>
                 </div>
                 <button id="mobileMenuBtn" class="md:hidden text-gray-300 hover:text-white transition-colors" aria-label="Toggle mobile menu" aria-expanded="false">
-                    <i class="fas fa-bars text-xl"></i>
+                    <span class="icon text-xl" aria-hidden="true">☰</span>
                 </button>
             </div>
             <!-- Mobile Menu -->
@@ -195,7 +203,7 @@
                     <a href="#features" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors">Features</a>
                     <a href="#faq" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors">FAQ</a>
                     <a href="https://github.com/qusaismael/rss-ai" target="_blank" class="block px-3 py-2 mt-2 gradient-bg rounded-md text-white font-medium text-center">
-                        <i class="fab fa-github mr-2"></i>Get Started
+                        <span class="icon mr-2" aria-hidden="true">🐙</span>Get Started
                     </a>
                 </div>
             </div>
@@ -216,11 +224,11 @@
                 </p>
                 <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
                     <a href="https://github.com/qusaismael/rss-ai" target="_blank" class="px-8 py-4 gradient-bg rounded-lg text-white font-semibold text-lg hover:opacity-90 transition-opacity inline-flex items-center">
-                        <i class="fab fa-github mr-3 text-xl"></i>
+                        <span class="icon mr-3 text-xl" aria-hidden="true">🐙</span>
                         Clone on GitHub
                     </a>
                     <a href="#how-it-works" class="px-8 py-4 glass rounded-lg text-white font-semibold text-lg hover:bg-white/10 transition-colors inline-flex items-center">
-                        <i class="fas fa-play-circle mr-3 text-xl"></i>
+                        <span class="icon mr-3 text-xl" aria-hidden="true">▶</span>
                         See How It Works
                     </a>
                 </div>
@@ -231,38 +239,38 @@
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
                     <div class="glass rounded-xl p-6 animate-float" style="animation-delay: 0s;">
                         <div class="flex items-start space-x-3 mb-3">
-                            <i class="fas fa-newspaper text-indigo-400 text-2xl"></i>
+                            <span class="icon text-indigo-400 text-2xl" aria-hidden="true">📰</span>
                             <div class="flex-1">
                                 <h3 class="font-semibold text-white mb-1">Breaking: New AI Model Released</h3>
                                 <p class="text-xs text-gray-400">Hacker News • 5m ago</p>
                             </div>
                         </div>
                         <span class="inline-block px-3 py-1 bg-green-900/30 text-green-400 rounded-full text-xs">
-                            <i class="fas fa-check-circle mr-1"></i>AI Approved
+                            <span class="icon mr-1" aria-hidden="true">✅</span>AI Approved
                         </span>
                     </div>
                     <div class="glass rounded-xl p-6 animate-float" style="animation-delay: 0.5s;">
                         <div class="flex items-start space-x-3 mb-3">
-                            <i class="fas fa-code text-purple-400 text-2xl"></i>
+                            <span class="icon text-purple-400 text-2xl" aria-hidden="true">&lt;/&gt;</span>
                             <div class="flex-1">
                                 <h3 class="font-semibold text-white mb-1">Framework 2.0 Announced</h3>
                                 <p class="text-xs text-gray-400">Dev.to • 12m ago</p>
                             </div>
                         </div>
                         <span class="inline-block px-3 py-1 bg-green-900/30 text-green-400 rounded-full text-xs">
-                            <i class="fas fa-check-circle mr-1"></i>AI Approved
+                            <span class="icon mr-1" aria-hidden="true">✅</span>AI Approved
                         </span>
                     </div>
                     <div class="glass rounded-xl p-6 opacity-40" style="animation-delay: 1s;">
                         <div class="flex items-start space-x-3 mb-3">
-                            <i class="fas fa-star text-gray-500 text-2xl"></i>
+                            <span class="icon text-gray-500 text-2xl" aria-hidden="true">⭐</span>
                             <div class="flex-1">
                                 <h3 class="font-semibold text-gray-400 mb-1 line-through">Celebrity Drama Update</h3>
                                 <p class="text-xs text-gray-500">Gossip Site • 1h ago</p>
                             </div>
                         </div>
                         <span class="inline-block px-3 py-1 bg-red-900/30 text-red-400 rounded-full text-xs">
-                            <i class="fas fa-times-circle mr-1"></i>Filtered Out
+                            <span class="icon mr-1" aria-hidden="true">❌</span>Filtered Out
                         </span>
                     </div>
                 </div>
@@ -304,28 +312,28 @@
             <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
                 <div class="glass rounded-2xl p-8 card-hover">
                     <div class="w-16 h-16 bg-red-900/30 rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-times text-red-400 text-3xl"></i>
+                        <span class="icon text-red-400 text-3xl" aria-hidden="true">✕</span>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">The Old Way</h3>
                     <ul class="space-y-3 text-gray-400">
-                        <li><i class="fas fa-skull text-red-400 mr-3"></i>Endless doomscrolling</li>
-                        <li><i class="fas fa-skull text-red-400 mr-3"></i>Algorithm-driven brain rot</li>
-                        <li><i class="fas fa-skull text-red-400 mr-3"></i>FOMO and anxiety</li>
-                        <li><i class="fas fa-skull text-red-400 mr-3"></i>912+ hours wasted yearly</li>
-                        <li><i class="fas fa-skull text-red-400 mr-3"></i>Mental junk and negativity</li>
+                        <li><span class="icon text-red-400 mr-3" aria-hidden="true">💀</span>Endless doomscrolling</li>
+                        <li><span class="icon text-red-400 mr-3" aria-hidden="true">💀</span>Algorithm-driven brain rot</li>
+                        <li><span class="icon text-red-400 mr-3" aria-hidden="true">💀</span>FOMO and anxiety</li>
+                        <li><span class="icon text-red-400 mr-3" aria-hidden="true">💀</span>912+ hours wasted yearly</li>
+                        <li><span class="icon text-red-400 mr-3" aria-hidden="true">💀</span>Mental junk and negativity</li>
                     </ul>
                 </div>
                 <div class="glass rounded-2xl p-8 card-hover border-2 border-indigo-500/50">
                     <div class="w-16 h-16 gradient-bg rounded-xl flex items-center justify-center mb-6">
-                        <i class="fas fa-check text-white text-3xl"></i>
+                        <span class="icon text-white text-3xl" aria-hidden="true">✅</span>
                     </div>
                     <h3 class="text-2xl font-bold mb-4">The RSS + AI Way</h3>
                     <ul class="space-y-3 text-gray-400">
-                        <li><i class="fas fa-star text-green-400 mr-3"></i>AI-filtered signal only</li>
-                        <li><i class="fas fa-star text-green-400 mr-3"></i>No algorithm manipulation</li>
-                        <li><i class="fas fa-star text-green-400 mr-3"></i>Peace of mind</li>
-                        <li><i class="fas fa-star text-green-400 mr-3"></i>Save 2.6 years of life</li>
-                        <li><i class="fas fa-star text-green-400 mr-3"></i>Only what matters to YOU</li>
+                        <li><span class="icon text-green-400 mr-3" aria-hidden="true">⭐</span>AI-filtered signal only</li>
+                        <li><span class="icon text-green-400 mr-3" aria-hidden="true">⭐</span>No algorithm manipulation</li>
+                        <li><span class="icon text-green-400 mr-3" aria-hidden="true">⭐</span>Peace of mind</li>
+                        <li><span class="icon text-green-400 mr-3" aria-hidden="true">⭐</span>Save 2.6 years of life</li>
+                        <li><span class="icon text-green-400 mr-3" aria-hidden="true">⭐</span>Only what matters to YOU</li>
                     </ul>
                 </div>
             </div>
@@ -352,7 +360,7 @@
                 <div class="text-center">
                     <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black">1</div>
                     <div class="glass rounded-xl p-6">
-                        <i class="fas fa-rss text-4xl text-indigo-400 mb-4"></i>
+                        <span class="icon text-4xl text-indigo-400 mb-4" aria-hidden="true">📡</span>
                         <h3 class="text-xl font-bold mb-3">Pull RSS Feeds</h3>
                         <p class="text-gray-400 text-sm">Connect to your favorite news sources via RSS</p>
                     </div>
@@ -360,7 +368,7 @@
                 <div class="text-center">
                     <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black">2</div>
                     <div class="glass rounded-xl p-6">
-                        <i class="fas fa-brain text-4xl text-purple-400 mb-4"></i>
+                        <span class="icon text-4xl text-purple-400 mb-4" aria-hidden="true">🧠</span>
                         <h3 class="text-xl font-bold mb-3">AI Filtering</h3>
                         <p class="text-gray-400 text-sm">Gemini AI analyzes headlines for relevance</p>
                     </div>
@@ -368,7 +376,7 @@
                 <div class="text-center">
                     <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black">3</div>
                     <div class="glass rounded-xl p-6">
-                        <i class="fas fa-filter text-4xl text-pink-400 mb-4"></i>
+                        <span class="icon text-4xl text-pink-400 mb-4" aria-hidden="true">🧹</span>
                         <h3 class="text-xl font-bold mb-3">Smart Filter</h3>
                         <p class="text-gray-400 text-sm">Only important news passes through</p>
                     </div>
@@ -376,7 +384,7 @@
                 <div class="text-center">
                     <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center mx-auto mb-6 text-2xl font-black">4</div>
                     <div class="glass rounded-xl p-6">
-                        <i class="fab fa-telegram text-4xl text-blue-400 mb-4"></i>
+                        <span class="icon text-4xl text-blue-400 mb-4" aria-hidden="true">✈</span>
                         <h3 class="text-xl font-bold mb-3">Telegram Delivery</h3>
                         <p class="text-gray-400 text-sm">Receive notifications instantly</p>
                     </div>
@@ -394,32 +402,32 @@
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="glass rounded-xl p-8 card-hover">
-                    <i class="fas fa-magic text-4xl gradient-text mb-4"></i>
+                    <span class="icon text-4xl gradient-text mb-4" aria-hidden="true">✨</span>
                     <h3 class="text-xl font-bold mb-3">AI-Powered</h3>
                     <p class="text-gray-400">Uses Google's free Gemini API to intelligently filter headlines</p>
                 </div>
                 <div class="glass rounded-xl p-8 card-hover">
-                    <i class="fas fa-cog text-4xl gradient-text mb-4"></i>
+                    <span class="icon text-4xl gradient-text mb-4" aria-hidden="true">⚙</span>
                     <h3 class="text-xl font-bold mb-3">Customizable</h3>
                     <p class="text-gray-400">Tweak the AI prompt to match your interests perfectly</p>
                 </div>
                 <div class="glass rounded-xl p-8 card-hover">
-                    <i class="fas fa-clock text-4xl gradient-text mb-4"></i>
+                    <span class="icon text-4xl gradient-text mb-4" aria-hidden="true">⏰</span>
                     <h3 class="text-xl font-bold mb-3">Automated</h3>
                     <p class="text-gray-400">Checks feeds every 15 minutes automatically</p>
                 </div>
                 <div class="glass rounded-xl p-8 card-hover">
-                    <i class="fas fa-dollar-sign text-4xl gradient-text mb-4"></i>
+                    <span class="icon text-4xl gradient-text mb-4" aria-hidden="true">💰</span>
                     <h3 class="text-xl font-bold mb-3">100% Free</h3>
                     <p class="text-gray-400">Open source with free API keys (Gemini + Telegram)</p>
                 </div>
                 <div class="glass rounded-xl p-8 card-hover">
-                    <i class="fas fa-shield-alt text-4xl gradient-text mb-4"></i>
+                    <span class="icon text-4xl gradient-text mb-4" aria-hidden="true">🛡</span>
                     <h3 class="text-xl font-bold mb-3">Privacy First</h3>
                     <p class="text-gray-400">No tracking, no ads, no data collection</p>
                 </div>
                 <div class="glass rounded-xl p-8 card-hover">
-                    <i class="fas fa-rocket text-4xl gradient-text mb-4"></i>
+                    <span class="icon text-4xl gradient-text mb-4" aria-hidden="true">🚀</span>
                     <h3 class="text-xl font-bold mb-3">Easy Setup</h3>
                     <p class="text-gray-400">5 minutes from clone to running. Just add API keys</p>
                 </div>
@@ -444,7 +452,7 @@
                         <div class="flex-1 flex items-center justify-between bg-gray-900/50 rounded px-3 py-2">
                             <code class="text-green-400">git clone https://github.com/qusaismael/rss-ai.git</code>
                             <button onclick="copyToClipboard('git clone https://github.com/qusaismael/rss-ai.git', this)" class="copy-btn ml-3 text-gray-400 hover:text-white" aria-label="Copy command">
-                                <i class="fas fa-copy"></i>
+                                <span class="icon" aria-hidden="true">📋</span>
                             </button>
                         </div>
                     </div>
@@ -453,7 +461,7 @@
                         <div class="flex-1 flex items-center justify-between bg-gray-900/50 rounded px-3 py-2">
                             <code class="text-green-400">pip install -r requirements.txt</code>
                             <button onclick="copyToClipboard('pip install -r requirements.txt', this)" class="copy-btn ml-3 text-gray-400 hover:text-white" aria-label="Copy command">
-                                <i class="fas fa-copy"></i>
+                                <span class="icon" aria-hidden="true">📋</span>
                             </button>
                         </div>
                     </div>
@@ -468,7 +476,7 @@
                         <div class="flex-1 flex items-center justify-between bg-gray-900/50 rounded px-3 py-2">
                             <code class="text-green-400">python main.py</code>
                             <button onclick="copyToClipboard('python main.py', this)" class="copy-btn ml-3 text-gray-400 hover:text-white" aria-label="Copy command">
-                                <i class="fas fa-copy"></i>
+                                <span class="icon" aria-hidden="true">📋</span>
                             </button>
                         </div>
                     </div>
@@ -476,7 +484,7 @@
             </div>
 
             <a href="https://github.com/qusaismael/rss-ai" target="_blank" class="inline-flex items-center px-12 py-5 gradient-bg rounded-xl text-white font-bold text-xl hover:opacity-90 transition-opacity">
-                <i class="fab fa-github mr-3 text-2xl"></i>
+                <span class="icon mr-3 text-2xl" aria-hidden="true">🐙</span>
                 Get Started on GitHub
             </a>
         </div>
@@ -494,7 +502,7 @@
                 <div class="glass rounded-xl overflow-hidden">
                     <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold">Is this really free?</span>
-                        <i class="fas fa-chevron-down transition-transform"></i>
+                        <span class="icon transition-transform" aria-hidden="true">⌄</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
                         <div class="px-6 pb-5 text-gray-400">
@@ -506,7 +514,7 @@
                 <div class="glass rounded-xl overflow-hidden">
                     <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold">How does the AI filtering work?</span>
-                        <i class="fas fa-chevron-down transition-transform"></i>
+                        <span class="icon transition-transform" aria-hidden="true">⌄</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
                         <div class="px-6 pb-5 text-gray-400">
@@ -518,7 +526,7 @@
                 <div class="glass rounded-xl overflow-hidden">
                     <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold">Can I add my own RSS feeds?</span>
-                        <i class="fas fa-chevron-down transition-transform"></i>
+                        <span class="icon transition-transform" aria-hidden="true">⌄</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
                         <div class="px-6 pb-5 text-gray-400">
@@ -530,7 +538,7 @@
                 <div class="glass rounded-xl overflow-hidden">
                     <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold">Where does it run?</span>
-                        <i class="fas fa-chevron-down transition-transform"></i>
+                        <span class="icon transition-transform" aria-hidden="true">⌄</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
                         <div class="px-6 pb-5 text-gray-400">
@@ -542,7 +550,7 @@
                 <div class="glass rounded-xl overflow-hidden">
                     <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold">How often are feeds checked?</span>
-                        <i class="fas fa-chevron-down transition-transform"></i>
+                        <span class="icon transition-transform" aria-hidden="true">⌄</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
                         <div class="px-6 pb-5 text-gray-400">
@@ -554,7 +562,7 @@
                 <div class="glass rounded-xl overflow-hidden">
                     <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" aria-expanded="false">
                         <span class="text-lg font-semibold">What if I need help?</span>
-                        <i class="fas fa-chevron-down transition-transform"></i>
+                        <span class="icon transition-transform" aria-hidden="true">⌄</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
                         <div class="px-6 pb-5 text-gray-400">
@@ -572,16 +580,16 @@
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-3 mb-4 md:mb-0">
                     <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
-                        <i class="fas fa-rss text-white text-xl"></i>
+                        <span class="icon text-white text-xl" aria-hidden="true">📡</span>
                     </div>
                     <span class="text-xl font-bold gradient-text">RSS + AI</span>
                 </div>
                 <div class="flex items-center space-x-6">
                     <a href="https://github.com/qusaismael/rss-ai" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-github text-2xl"></i>
+                        <span class="icon text-2xl" aria-hidden="true">🐙</span>
                     </a>
                     <a href="https://x.com/qusaismael" target="_blank" class="text-gray-400 hover:text-white transition-colors">
-                        <i class="fab fa-twitter text-2xl"></i>
+                        <span class="icon text-2xl" aria-hidden="true">🐦</span>
                     </a>
                 </div>
             </div>
@@ -600,9 +608,8 @@
         mobileMenuBtn.addEventListener('click', () => {
             const isOpen = mobileMenu.classList.toggle('open');
             mobileMenuBtn.setAttribute('aria-expanded', isOpen);
-            const icon = mobileMenuBtn.querySelector('i');
-            icon.classList.toggle('fa-bars');
-            icon.classList.toggle('fa-times');
+            const icon = mobileMenuBtn.querySelector('.icon');
+            icon.textContent = isOpen ? '✕' : '☰';
         });
 
         // Close mobile menu when clicking on a link
@@ -610,9 +617,8 @@
             link.addEventListener('click', () => {
                 mobileMenu.classList.remove('open');
                 mobileMenuBtn.setAttribute('aria-expanded', 'false');
-                const icon = mobileMenuBtn.querySelector('i');
-                icon.classList.add('fa-bars');
-                icon.classList.remove('fa-times');
+                const icon = mobileMenuBtn.querySelector('.icon');
+                icon.textContent = '☰';
             });
         });
 
@@ -638,13 +644,15 @@
         // Copy to clipboard function
         function copyToClipboard(text, button) {
             navigator.clipboard.writeText(text).then(() => {
-                const icon = button.querySelector('i');
+                const icon = button.querySelector('.icon');
                 const originalClass = icon.className;
-                icon.className = 'fas fa-check';
+                const originalText = icon.textContent;
+                icon.textContent = '✓';
                 button.classList.add('text-green-400');
                 
                 setTimeout(() => {
                     icon.className = originalClass;
+                    icon.textContent = originalText;
                     button.classList.remove('text-green-400');
                 }, 2000);
             }).catch(err => {
@@ -655,7 +663,7 @@
         // FAQ accordion toggle
         function toggleFaq(button) {
             const answer = button.nextElementSibling;
-            const icon = button.querySelector('i');
+            const icon = button.querySelector('.icon');
             const isExpanded = button.getAttribute('aria-expanded') === 'true';
             
             // Close all other FAQs
@@ -663,7 +671,7 @@
                 if (el !== answer) {
                     el.style.maxHeight = '0';
                     el.previousElementSibling.setAttribute('aria-expanded', 'false');
-                    el.previousElementSibling.querySelector('i').style.transform = 'rotate(0deg)';
+                    el.previousElementSibling.querySelector('.icon').style.transform = 'rotate(0deg)';
                 }
             });
             
