@@ -80,6 +80,17 @@ test('reduced motion disables animation and anchor smooth scrolling', () => {
   assert.deepEqual(observed, ['smooth', 'instant']);
 });
 
+test('Tailwind utilities are a committed local stylesheet, not a runtime CDN', () => {
+  assert.ok(html.includes('<link rel="stylesheet" href="./assets/tailwind.css">'), 'local stylesheet is linked');
+  assert.ok(!html.includes('cdn.tailwindcss.com'), 'runtime CDN is removed');
+  const stylesheet = path.join(__dirname, '../assets/tailwind.css');
+  assert.ok(fs.existsSync(stylesheet), 'generated CSS exists on static hosts');
+  const css = fs.readFileSync(stylesheet, 'utf8');
+  assert.ok(css.includes('.bg-gray-950{'), 'background utility is compiled');
+  assert.ok(css.includes('.text-gray-100{'), 'foreground utility is compiled');
+  assert.ok(css.includes('.md\\:flex{'), 'responsive utility is compiled');
+});
+
 test('mobile menu becomes keyboard-reachable only while expanded', () => {
   const menu = { classList: classList(), hidden: true };
   const icon = { textContent: '☰' };

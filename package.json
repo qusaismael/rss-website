@@ -1,0 +1,11 @@
+{
+  "name": "rss-website",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.cjs",
+    "build:css": "tailwindcss -c tailwind.config.cjs -i ./assets/input.css -o ./assets/tailwind.css --minify"
+  },
+  "devDependencies": {
+    "tailwindcss": "3.4.17"
+  }
+}
