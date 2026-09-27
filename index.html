@@ -441,82 +441,82 @@
     </section>
 
     <!-- FAQ Section -->
-    <section id="faq" class="py-20 px-4">
+    <section id="faq" class="py-20 md:py-28 px-4 sm:px-6 bg-paper">
         <div class="max-w-4xl mx-auto">
-            <div class="text-center mb-16">
-                <h2 class="text-5xl font-black mb-6"><span class="gradient-text">FAQ</span></h2>
-                <p class="text-xl text-gray-400">Everything you need to know</p>
+            <div class="mb-12 md:mb-16">
+                <h2 class="font-display font-extrabold text-ink text-[clamp(2rem,4.5vw,3.25rem)] leading-[1.05] tracking-[-0.02em] mb-4">FAQ</h2>
+                <p class="text-lg md:text-xl text-muted">Everything you need to know</p>
             </div>
 
-            <div class="space-y-4">
-                <div class="glass rounded-xl overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" aria-expanded="false">
-                        <span class="text-lg font-semibold">Is this really free?</span>
-                        <span class="icon transition-transform" aria-hidden="true">⌄</span>
+            <div class="border-t border-line">
+                <div class="border-b border-line">
+                    <button onclick="toggleFaq(this)" class="w-full px-2 py-5 text-left flex items-center justify-between gap-4 hover:bg-surface transition-colors" aria-expanded="false">
+                        <span class="text-lg font-semibold text-ink">Is this really free?</span>
+                        <span class="icon transition-transform text-muted text-xl" aria-hidden="true">⌄</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="px-6 pb-5 text-gray-400">
+                        <div class="px-2 pb-5 text-muted">
                             Yes! 100% free and open source. It uses Google's free Gemini API and Telegram's free bot API. There are no hidden costs or premium features.
                         </div>
                     </div>
                 </div>
 
-                <div class="glass rounded-xl overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" aria-expanded="false">
-                        <span class="text-lg font-semibold">How does the AI filtering work?</span>
-                        <span class="icon transition-transform" aria-hidden="true">⌄</span>
+                <div class="border-b border-line">
+                    <button onclick="toggleFaq(this)" class="w-full px-2 py-5 text-left flex items-center justify-between gap-4 hover:bg-surface transition-colors" aria-expanded="false">
+                        <span class="text-lg font-semibold text-ink">How does the AI filtering work?</span>
+                        <span class="icon transition-transform text-muted text-xl" aria-hidden="true">⌄</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="px-6 pb-5 text-gray-400">
+                        <div class="px-2 pb-5 text-muted">
                             The AI reads each RSS article headline and summary, then decides if it's important based on your custom prompt. You can define what "important" means for you - tech news, specific topics, or anything else.
                         </div>
                     </div>
                 </div>
 
-                <div class="glass rounded-xl overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" aria-expanded="false">
-                        <span class="text-lg font-semibold">Can I add my own RSS feeds?</span>
-                        <span class="icon transition-transform" aria-hidden="true">⌄</span>
+                <div class="border-b border-line">
+                    <button onclick="toggleFaq(this)" class="w-full px-2 py-5 text-left flex items-center justify-between gap-4 hover:bg-surface transition-colors" aria-expanded="false">
+                        <span class="text-lg font-semibold text-ink">Can I add my own RSS feeds?</span>
+                        <span class="icon transition-transform text-muted text-xl" aria-hidden="true">⌄</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="px-6 pb-5 text-gray-400">
-                            Absolutely! Just edit the <code class="text-yellow-400">main.py</code> file and add any RSS feed URL you want. Works with blogs, news sites, podcasts, and more.
+                        <div class="px-2 pb-5 text-muted">
+                            Absolutely! Just edit the <code class="text-primary font-medium">main.py</code> file and add any RSS feed URL you want. Works with blogs, news sites, podcasts, and more.
                         </div>
                     </div>
                 </div>
 
-                <div class="glass rounded-xl overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" aria-expanded="false">
-                        <span class="text-lg font-semibold">Where does it run?</span>
-                        <span class="icon transition-transform" aria-hidden="true">⌄</span>
+                <div class="border-b border-line">
+                    <button onclick="toggleFaq(this)" class="w-full px-2 py-5 text-left flex items-center justify-between gap-4 hover:bg-surface transition-colors" aria-expanded="false">
+                        <span class="text-lg font-semibold text-ink">Where does it run?</span>
+                        <span class="icon transition-transform text-muted text-xl" aria-hidden="true">⌄</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="px-6 pb-5 text-gray-400">
+                        <div class="px-2 pb-5 text-muted">
                             It runs on your own machine or server. You have complete control. For 24/7 operation, you can deploy it on a cloud service or a Raspberry Pi.
                         </div>
                     </div>
                 </div>
 
-                <div class="glass rounded-xl overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" aria-expanded="false">
-                        <span class="text-lg font-semibold">How often are feeds checked?</span>
-                        <span class="icon transition-transform" aria-hidden="true">⌄</span>
+                <div class="border-b border-line">
+                    <button onclick="toggleFaq(this)" class="w-full px-2 py-5 text-left flex items-center justify-between gap-4 hover:bg-surface transition-colors" aria-expanded="false">
+                        <span class="text-lg font-semibold text-ink">How often are feeds checked?</span>
+                        <span class="icon transition-transform text-muted text-xl" aria-hidden="true">⌄</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="px-6 pb-5 text-gray-400">
+                        <div class="px-2 pb-5 text-muted">
                             By default, every 15 minutes. You can adjust this in the code to check more or less frequently based on your needs.
                         </div>
                     </div>
                 </div>
 
-                <div class="glass rounded-xl overflow-hidden">
-                    <button onclick="toggleFaq(this)" class="w-full px-6 py-5 text-left flex items-center justify-between hover:bg-white/5 transition-colors" aria-expanded="false">
-                        <span class="text-lg font-semibold">What if I need help?</span>
-                        <span class="icon transition-transform" aria-hidden="true">⌄</span>
+                <div class="border-b border-line">
+                    <button onclick="toggleFaq(this)" class="w-full px-2 py-5 text-left flex items-center justify-between gap-4 hover:bg-surface transition-colors" aria-expanded="false">
+                        <span class="text-lg font-semibold text-ink">What if I need help?</span>
+                        <span class="icon transition-transform text-muted text-xl" aria-hidden="true">⌄</span>
                     </button>
                     <div class="faq-answer max-h-0 overflow-hidden transition-all duration-300">
-                        <div class="px-6 pb-5 text-gray-400">
-                            Open an issue on <a href="https://github.com/qusaismael/rss-ai/issues" target="_blank" class="text-indigo-400 hover:text-indigo-300">GitHub</a> or check the README for detailed setup instructions. The community is friendly and helpful!
+                        <div class="px-2 pb-5 text-muted">
+                            Open an issue on <a href="https://github.com/qusaismael/rss-ai/issues" target="_blank" class="text-primary hover:text-secondary">GitHub</a> or check the README for detailed setup instructions. The community is friendly and helpful!
                         </div>
                     </div>
                 </div>
@@ -525,27 +525,27 @@
     </section>
 
     <!-- Footer -->
-    <footer class="py-12 px-4 border-t border-gray-800">
-        <div class="max-w-7xl mx-auto">
+    <footer class="py-12 px-4 sm:px-6 bg-surface border-t border-line">
+        <div class="max-w-6xl mx-auto">
             <div class="flex flex-col md:flex-row items-center justify-between">
                 <div class="flex items-center space-x-3 mb-4 md:mb-0">
-                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
                         <span class="icon text-white text-xl" aria-hidden="true">📡</span>
                     </div>
-                    <span class="text-xl font-bold gradient-text">RSS + AI</span>
+                    <span class="font-display text-xl font-extrabold text-ink">RSS + AI</span>
                 </div>
-                <div class="flex items-center space-x-6">
-                    <a href="https://github.com/qusaismael/rss-ai" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                <div class="flex items-center space-x-2">
+                    <a href="https://github.com/qusaismael/rss-ai" target="_blank" class="h-11 w-11 inline-flex items-center justify-center text-muted hover:text-ink transition-colors">
                         <span class="icon text-2xl" aria-hidden="true">🐙</span>
                     </a>
-                    <a href="https://x.com/qusaismael" target="_blank" class="text-gray-400 hover:text-white transition-colors">
+                    <a href="https://x.com/qusaismael" target="_blank" class="h-11 w-11 inline-flex items-center justify-center text-muted hover:text-ink transition-colors">
                         <span class="icon text-2xl" aria-hidden="true">🐦</span>
                     </a>
                 </div>
             </div>
-            <div class="text-center mt-8 text-gray-500 text-sm">
+            <div class="text-center mt-8 text-muted text-sm">
                 <p>Open source • MIT License • Built with ❤️</p>
-                <p class="mt-2 gradient-text font-semibold">Just eat the fish, spit the bones.</p>
+                <p class="mt-2 font-display font-semibold text-ink">Just eat the fish, spit the bones.</p>
             </div>
         </div>
     </footer>
