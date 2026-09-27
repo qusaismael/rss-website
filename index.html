@@ -111,42 +111,42 @@
         }
     </style>
 </head>
-<body class="bg-gray-950 text-gray-100 overflow-x-hidden">
+<body class="bg-paper text-ink overflow-x-hidden">
     
     <!-- Scroll Progress Bar -->
     <div class="scroll-progress" id="scrollProgress"></div>
     
     <!-- Navigation -->
-    <nav class="fixed top-0 w-full z-50 glass">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav class="fixed top-0 w-full z-50 bg-paper/80 backdrop-blur-md border-b border-line">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6">
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center space-x-3">
-                    <div class="w-10 h-10 gradient-bg rounded-lg flex items-center justify-center">
+                    <div class="w-10 h-10 bg-primary rounded-xl flex items-center justify-center">
                         <span class="icon text-white text-xl" aria-hidden="true">📡</span>
                     </div>
-                    <span class="text-xl font-bold gradient-text">RSS + AI</span>
+                    <span class="font-display text-xl font-extrabold text-ink">RSS + AI</span>
                 </div>
-                <div class="hidden md:flex items-center space-x-8">
-                    <a href="#how-it-works" class="text-gray-300 hover:text-white transition-colors">How It Works</a>
-                    <a href="#why" class="text-gray-300 hover:text-white transition-colors">Why</a>
-                    <a href="#features" class="text-gray-300 hover:text-white transition-colors">Features</a>
-                    <a href="#faq" class="text-gray-300 hover:text-white transition-colors">FAQ</a>
-                    <a href="https://github.com/qusaismael/rss-ai" target="_blank" class="px-4 py-2 gradient-bg rounded-lg text-white font-medium hover:opacity-90 transition-opacity" aria-label="Get Started on GitHub">
+                <div class="hidden md:flex items-center space-x-2 lg:space-x-3">
+                    <a href="#how-it-works" class="px-3 py-3 text-muted hover:text-ink transition-colors">How It Works</a>
+                    <a href="#why" class="px-3 py-3 text-muted hover:text-ink transition-colors">Why</a>
+                    <a href="#features" class="px-3 py-3 text-muted hover:text-ink transition-colors">Features</a>
+                    <a href="#faq" class="px-3 py-3 text-muted hover:text-ink transition-colors">FAQ</a>
+                    <a href="https://github.com/qusaismael/rss-ai" target="_blank" class="ml-2 px-5 py-3 bg-primary rounded-full text-white font-medium hover:bg-indigo-700 transition-colors" aria-label="Get Started on GitHub">
                         <span class="icon mr-2" aria-hidden="true">🐙</span>Get Started
                     </a>
                 </div>
-                <button id="mobileMenuBtn" class="md:hidden text-gray-300 hover:text-white transition-colors" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
+                <button id="mobileMenuBtn" class="md:hidden h-11 w-11 -mr-2 flex items-center justify-center text-ink hover:text-primary transition-colors" aria-label="Toggle mobile menu" aria-expanded="false" aria-controls="mobileMenu">
                     <span class="icon text-xl" aria-hidden="true">☰</span>
                 </button>
             </div>
             <!-- Mobile Menu -->
             <div id="mobileMenu" class="mobile-menu md:hidden" hidden>
                 <div class="px-2 pt-2 pb-3 space-y-1">
-                    <a href="#how-it-works" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors">How It Works</a>
-                    <a href="#why" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors">Why</a>
-                    <a href="#features" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors">Features</a>
-                    <a href="#faq" class="block px-3 py-2 text-gray-300 hover:text-white hover:bg-gray-800 rounded-md transition-colors">FAQ</a>
-                    <a href="https://github.com/qusaismael/rss-ai" target="_blank" class="block px-3 py-2 mt-2 gradient-bg rounded-md text-white font-medium text-center">
+                    <a href="#how-it-works" class="block px-3 py-3 text-muted hover:text-ink hover:bg-paper rounded-lg transition-colors">How It Works</a>
+                    <a href="#why" class="block px-3 py-3 text-muted hover:text-ink hover:bg-paper rounded-lg transition-colors">Why</a>
+                    <a href="#features" class="block px-3 py-3 text-muted hover:text-ink hover:bg-paper rounded-lg transition-colors">Features</a>
+                    <a href="#faq" class="block px-3 py-3 text-muted hover:text-ink hover:bg-paper rounded-lg transition-colors">FAQ</a>
+                    <a href="https://github.com/qusaismael/rss-ai" target="_blank" class="block px-3 py-3 mt-2 bg-primary rounded-full text-white font-medium text-center">
                         <span class="icon mr-2" aria-hidden="true">🐙</span>Get Started
                     </a>
                 </div>
@@ -155,65 +155,77 @@
     </nav>
 
     <!-- Hero Section -->
-    <section class="relative pt-32 pb-20 px-4 hero-gradient">
-        <div class="max-w-7xl mx-auto">
-            <div class="text-center animate-fade-in">
-                <h1 class="text-6xl md:text-8xl font-black mb-6 leading-tight">
-                    Stop <span class="gradient-text">Doomscrolling</span><br>
-                    Start <span class="gradient-text">Living</span>
+    <section class="relative bg-paper pt-28 md:pt-36 pb-20 md:pb-28 px-4 sm:px-6">
+        <div class="max-w-6xl mx-auto grid lg:grid-cols-[1.05fr_0.95fr] gap-14 lg:gap-20 items-center">
+            <div>
+                <h1 class="font-display font-extrabold text-ink text-[clamp(2.3rem,6vw,4.5rem)] leading-[1.03] tracking-[-0.02em] mb-6 break-words">
+                    Stop Doomscrolling<br>
+                    Start Living
                 </h1>
-                <p class="text-xl md:text-2xl text-gray-400 max-w-3xl mx-auto mb-12">
-                    AI-powered RSS filter that saves you <strong class="text-white">2.6 years</strong> of life.<br>
+                <p class="text-lg md:text-xl text-muted max-w-xl mb-10 leading-relaxed">
+                    AI-powered RSS filter that saves you <strong class="text-ink font-semibold">2.6 years</strong> of life.<br>
                     Get only the news that matters, delivered straight to Telegram.
                 </p>
-                <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                    <a href="https://github.com/qusaismael/rss-ai" target="_blank" class="px-8 py-4 gradient-bg rounded-lg text-white font-semibold text-lg hover:opacity-90 transition-opacity inline-flex items-center">
+                <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 sm:gap-4 max-w-xl">
+                    <a href="https://github.com/qusaismael/rss-ai" target="_blank" class="inline-flex items-center justify-center px-7 py-4 bg-primary rounded-full text-white font-semibold hover:bg-indigo-700 transition-colors">
                         <span class="icon mr-3 text-xl" aria-hidden="true">🐙</span>
                         Clone on GitHub
                     </a>
-                    <a href="#how-it-works" class="px-8 py-4 glass rounded-lg text-white font-semibold text-lg hover:bg-white/10 transition-colors inline-flex items-center">
+                    <a href="#how-it-works" class="inline-flex items-center justify-center px-7 py-4 bg-surface border border-line rounded-full text-ink font-semibold hover:border-primary hover:text-primary transition-colors">
                         <span class="icon mr-3 text-xl" aria-hidden="true">▶</span>
                         See How It Works
                     </a>
                 </div>
             </div>
 
-            <!-- Floating Cards Demo -->
-            <div class="mt-20 relative">
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-                    <div class="glass rounded-xl p-6 animate-float" style="animation-delay: 0s;">
+            <!-- Triage demo: signal rides the rail, noise falls off it -->
+            <div class="relative pl-8 sm:pl-10">
+                <div class="filter-rail absolute left-[7px] sm:left-[9px] top-4 bottom-8 w-[3px] rounded-full" aria-hidden="true"></div>
+                <div class="rail-scan absolute left-[7px] sm:left-[9px] w-[3px] h-8 rounded-full bg-white shadow-[0_0_14px_5px_rgba(124,58,237,0.45)]" aria-hidden="true"></div>
+
+                <div class="relative mb-5">
+                    <span class="absolute left-[2px] sm:left-[4px] top-7 w-[13px] h-[13px] rounded-full bg-primary ring-4 ring-paper" aria-hidden="true"></span>
+                    <div class="bg-surface border border-line rounded-2xl p-5 shadow-sm">
                         <div class="flex items-start space-x-3 mb-3">
-                            <span class="icon text-indigo-400 text-2xl" aria-hidden="true">📰</span>
+                            <span class="icon text-primary text-2xl" aria-hidden="true">📰</span>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-white mb-1">Breaking: New AI Model Released</h3>
-                                <p class="text-xs text-gray-400">Hacker News • 5m ago</p>
+                                <h3 class="font-semibold text-ink mb-1">Breaking: New AI Model Released</h3>
+                                <p class="text-xs text-muted">Hacker News • 5m ago</p>
                             </div>
                         </div>
-                        <span class="inline-block px-3 py-1 bg-green-900/30 text-green-400 rounded-full text-xs">
+                        <span class="inline-flex items-center px-3 py-1 bg-signal-soft text-signal rounded-full text-xs font-medium">
                             <span class="icon mr-1" aria-hidden="true">✅</span>AI Approved
                         </span>
                     </div>
-                    <div class="glass rounded-xl p-6 animate-float" style="animation-delay: 0.5s;">
+                </div>
+
+                <div class="relative mb-5">
+                    <span class="absolute left-[2px] sm:left-[4px] top-7 w-[13px] h-[13px] rounded-full bg-secondary ring-4 ring-paper" aria-hidden="true"></span>
+                    <div class="bg-surface border border-line rounded-2xl p-5 shadow-sm">
                         <div class="flex items-start space-x-3 mb-3">
-                            <span class="icon text-purple-400 text-2xl" aria-hidden="true">&lt;/&gt;</span>
+                            <span class="icon text-secondary text-2xl" aria-hidden="true">&lt;/&gt;</span>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-white mb-1">Framework 2.0 Announced</h3>
-                                <p class="text-xs text-gray-400">Dev.to • 12m ago</p>
+                                <h3 class="font-semibold text-ink mb-1">Framework 2.0 Announced</h3>
+                                <p class="text-xs text-muted">Dev.to • 12m ago</p>
                             </div>
                         </div>
-                        <span class="inline-block px-3 py-1 bg-green-900/30 text-green-400 rounded-full text-xs">
+                        <span class="inline-flex items-center px-3 py-1 bg-signal-soft text-signal rounded-full text-xs font-medium">
                             <span class="icon mr-1" aria-hidden="true">✅</span>AI Approved
                         </span>
                     </div>
-                    <div class="glass rounded-xl p-6 opacity-40" style="animation-delay: 1s;">
+                </div>
+
+                <div class="relative">
+                    <span class="absolute left-[2px] sm:left-[4px] top-7 w-[13px] h-[13px] rounded-full bg-paper border-2 border-noise" aria-hidden="true"></span>
+                    <div class="ml-6 sm:ml-10 bg-paper border border-dashed border-line rounded-2xl p-5">
                         <div class="flex items-start space-x-3 mb-3">
-                            <span class="icon text-gray-500 text-2xl" aria-hidden="true">⭐</span>
+                            <span class="icon text-muted text-2xl" aria-hidden="true">⭐</span>
                             <div class="flex-1">
-                                <h3 class="font-semibold text-gray-400 mb-1 line-through">Celebrity Drama Update</h3>
-                                <p class="text-xs text-gray-500">Gossip Site • 1h ago</p>
+                                <h3 class="font-semibold text-muted mb-1 line-through">Celebrity Drama Update</h3>
+                                <p class="text-xs text-muted">Gossip Site • 1h ago</p>
                             </div>
                         </div>
-                        <span class="inline-block px-3 py-1 bg-red-900/30 text-red-400 rounded-full text-xs">
+                        <span class="inline-flex items-center px-3 py-1 bg-noise-soft text-noise rounded-full text-xs font-medium">
                             <span class="icon mr-1" aria-hidden="true">❌</span>Filtered Out
                         </span>
                     </div>
@@ -388,7 +400,7 @@
                 Get started in just 5 minutes.
             </p>
             
-            <div class="glass rounded-2xl p-8 mb-12 text-left">
+            <div class="bg-gray-950 text-gray-100 rounded-3xl p-6 sm:p-8 mb-12 text-left">
                 <h3 class="text-2xl font-bold mb-6 text-center">Quick Start</h3>
                 <div class="space-y-4 font-mono text-sm">
                     <div class="flex items-start space-x-3">
