@@ -22,10 +22,15 @@
     
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400..800&display=swap">
     <link rel="stylesheet" href="./assets/tailwind.css">
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap');
-        
+
+        html {
+            scroll-padding-top: 6rem;
+        }
+
         body {
             font-family: 'Inter', sans-serif;
         }
@@ -35,59 +40,34 @@
             justify-content: center;
             line-height: 1;
         }
-        
-        .gradient-text {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        
-        .gradient-bg {
-            background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 50%, #ec4899 100%);
-        }
-        
-        .glass {
-            background: rgba(255, 255, 255, 0.05);
-            backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-        
-        .hero-gradient {
-            background: radial-gradient(circle at 50% 0%, rgba(99, 102, 241, 0.2) 0%, transparent 50%);
-        }
-        
-        .card-hover {
-            transition: all 0.3s ease;
-        }
-        
-        .card-hover:hover {
-            transform: translateY(-8px);
-        }
-        
+
         .stat-number {
-            font-size: clamp(2rem, 5vw, 4rem);
+            font-family: 'Bricolage Grotesque', 'Inter', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 4.25rem);
+            font-weight: 800;
+            letter-spacing: -0.02em;
+            line-height: 1;
         }
-        
+
         .scroll-progress {
             position: fixed;
             top: 0;
             left: 0;
             width: 0%;
             height: 3px;
-            background: linear-gradient(90deg, #6366f1, #8b5cf6, #ec4899);
+            background: #4f46e5;
             z-index: 100;
             transition: width 0.1s ease-out;
         }
-        
+
         .copy-btn {
             transition: all 0.2s ease;
         }
-        
+
         .copy-btn:active {
             transform: scale(0.95);
         }
-        
+
         .mobile-menu {
             max-height: 0;
             overflow: hidden;
@@ -97,25 +77,32 @@
         .mobile-menu[hidden] { display: none; }
 
         .faq-answer[hidden] { display: none; }
-        
+
         .mobile-menu.open {
             max-height: 500px;
         }
-        
-        @keyframes pulse-ring {
-            0% {
-                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
-            }
-            70% {
-                box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
-            }
-            100% {
-                box-shadow: 0 0 0 0 rgba(99, 102, 241, 0);
-            }
+
+        /* Hero signal rail: the one animated moment on the page */
+        .filter-rail {
+            background: linear-gradient(180deg, #4f46e5 0%, #7c3aed 52%, #d9d9e6 78%, #e4e4ee 100%);
         }
-        
-        .pulse-ring {
-            animation: pulse-ring 2s infinite;
+
+        .rail-scan {
+            opacity: 0;
+            animation: rail-scan 1.8s ease-in-out 0.4s 1 both;
+        }
+
+        @keyframes rail-scan {
+            0% { top: 0; opacity: 0; }
+            12% { opacity: 1; }
+            88% { opacity: 1; }
+            100% { top: calc(100% - 2rem); opacity: 0; }
+        }
+
+        :focus-visible {
+            outline: 3px solid #4f46e5;
+            outline-offset: 3px;
+            border-radius: 4px;
         }
 
         @media (prefers-reduced-motion: reduce) {
